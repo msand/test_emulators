@@ -10,6 +10,9 @@ os:
 #  - xvfb
 env:
 
+  - SYS=28 ABI="google_apis;x86_64"
+  - SYS=27 ABI="google_apis;x86_64"
+  - SYS=26 ABI="google_apis;x86_64"
   - SYS=25 ABI="google_apis;x86_64"
   - SYS=24 ABI="google_apis;x86_64"
   - SYS=23 ABI="google_apis;x86_64"
@@ -24,6 +27,8 @@ env:
   - SYS=26 ABI="google_apis_playstore;x86"
   - SYS=24 ABI="google_apis_playstore;x86"
   
+  - SYS=28 ABI="google_apis;x86"
+  - SYS=27 ABI="google_apis;x86"
   - SYS=26 ABI="google_apis;x86"
   - SYS=25 ABI="google_apis;x86"
   - SYS=24 ABI="google_apis;x86"
