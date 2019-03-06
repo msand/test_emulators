@@ -138,6 +138,7 @@ before_install:
     if [ $TRAVIS_OS_NAME == "osx" ]; then
       wget -q "https://dl.google.com/android/repository/emulator-darwin-5346014.zip" -O emulator.zip
     else
+      apt-get install -y libunwind-dev
       wget -q "https://dl.google.com/android/repository/emulator-linux-5346014.zip" -O emulator.zip
     fi
   - unzip -q emulator.zip
