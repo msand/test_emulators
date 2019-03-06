@@ -156,7 +156,7 @@ before_install:
       EMU_PARAMS="-no-boot-anim -gpu off"
     fi
     if [[ $ABI =~ "x86" ]]; then
-      EMU_COMMAND="emulator-headless -no-accel"
+      EMU_COMMAND="emulator -no-accel"
     else
       EMU_COMMAND="emulator"
     fi
