@@ -11,7 +11,6 @@ os:
 env:
 
   - SYS=28 ABI="google_apis;x86_64"
-  - SYS=27 ABI="google_apis;x86_64"
   - SYS=26 ABI="google_apis;x86_64"
   - SYS=25 ABI="google_apis;x86_64"
   - SYS=24 ABI="google_apis;x86_64"
@@ -138,7 +137,7 @@ before_install:
     if [ $TRAVIS_OS_NAME == "osx" ]; then
       wget -q "https://dl.google.com/android/repository/emulator-darwin-5346014.zip" -O emulator.zip
     else
-      apt-get install -y libunwind-dev
+      apt-get install -y libunwind8
       wget -q "https://dl.google.com/android/repository/emulator-linux-5346014.zip" -O emulator.zip
     fi
   - unzip -q emulator.zip
@@ -156,7 +155,7 @@ before_install:
       EMU_PARAMS="-no-boot-anim -gpu off"
     fi
     if [[ $ABI =~ "x86" ]]; then
-      EMU_COMMAND="emulator -no-accel"
+      EMU_COMMAND="emulator-headless -no-accel"
     else
       EMU_COMMAND="emulator"
     fi
